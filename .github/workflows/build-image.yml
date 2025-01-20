@@ -43,6 +43,9 @@ jobs:
     - name: debug
       run: echo "::notice REG=${{ env.REGISTRY }} IMG=${{ env.IMAGE_NAME }}"
 
+    - name: List files for debug
+      run: ls -la src/main/docker
+
     - name: Build and push to dockerhub
       id: push
       uses: docker/build-push-action@v5
