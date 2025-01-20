@@ -24,4 +24,11 @@ public class QslController {
         return qslService.toPickup(call);
     }
 
+    @GET
+    @Path("/is-call-serviced")
+    @Produces(MediaType.APPLICATION_JSON)
+    public boolean isCallServiced(@QueryParam("call") String call) {
+        return qslService.isCallServiced(call);
+    }
+
 }

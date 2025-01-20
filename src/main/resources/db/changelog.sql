@@ -12,3 +12,9 @@ create table if not exists qsl.qsl_cards_to_pickup (
 
 --changeset sp6pat:2
 alter table qsl.qsl_cards_to_pickup add column collected boolean default false;
+
+--changeset sp6pat:3
+create table if not exists qsl.qsl_serviced_calls (
+       id              serial primary key,
+       callsign        text not null
+);
